@@ -1,0 +1,4 @@
+extract the keyword from blip only
+Exact Match Accuracy: 40.63%
+Average Label Proportion Score: 0.75
+

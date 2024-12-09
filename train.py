@@ -20,7 +20,7 @@ import pandas as pd
 from clip_model import CLIPImageClassifier
 import warnings
 warnings.filterwarnings("ignore", message=".*Torch was not compiled with flash attention.*")
-from our_model.bfc import BFC_Classifier
+from model.bfc import BFC_Classifier
 
 def main(args):
     # device = torch.device(args.device if torch.cuda.is_available() else "cpu")

@@ -1,1 +1,5 @@
 final_smoke_datasets/*
+final_smoke_datasets_label/*
+.test_cuda.py
+.split.py
+__pycache__/
