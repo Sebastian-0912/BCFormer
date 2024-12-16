@@ -199,7 +199,7 @@ def main():
         # print(f"Epoch [{epoch + 1}/{num_epochs}], Training Loss: {train_loss:.4f}, Validation Loss: {val_loss:.4f}")
         print(f"Epoch [{epoch + 1}/{num_epochs}], Training Loss: {train_loss:.4f}.")
 
-        if (epoch+1) *10 == 0:
+        if (epoch+1) % 10 == 0:
             torch.save(smoke_model.state_dict(), f"bclip_ep{epoch}.pth")
         
         scheduler.step()
