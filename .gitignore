@@ -1,5 +1,7 @@
 final_smoke_datasets/*
 final_smoke_datasets_label/*
+train_val_dataset/*
+model_pth/*
 .test_cuda.py
 .split.py
 __pycache__/
