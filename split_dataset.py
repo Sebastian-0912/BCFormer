@@ -7,9 +7,9 @@ original_data_dir = 'final_smoke_datasets'  # 原始數據夾
 train_dir = 'dataset/train'                 # 訓練集資料夾
 val_dir = 'dataset/val'                     # 驗證集資料夾
 train_ratio = 0.8                           # 訓練集比例
-label_file = 'final_smoke_datasets/labels.txt'  # 原始標籤檔案
-train_label_file = 'dataset/train/train_labels.txt'  # 訓練集標籤檔案
-val_label_file = 'dataset/val/val_labels.txt'      # 驗證集標籤檔案
+label_file = 'final_smoke_datasets_label/new_label.txt'  # 原始標籤檔案
+train_label_file = 'dataset/train_labels.txt'  # 訓練集標籤檔案
+val_label_file = 'dataset/val_labels.txt'      # 驗證集標籤檔案
 
 # 創建訓練和驗證資料夾
 os.makedirs(train_dir, exist_ok=True)
@@ -26,9 +26,9 @@ random.shuffle(all_files)
 
 # 分割文件列表
 train_size = int(train_ratio * len(all_files))
-train_files = all_files[:train_size]
-val_files = all_files[train_size:]
-
+train_files = sorted(all_files[:train_size], key=lambda x: int(x.split('.')[0]))
+val_files = sorted(all_files[train_size:], key=lambda x: int(x.split('.')[0]))
+print(train_files)
 # 初始化標籤檔案
 with open(train_label_file, 'w') as train_f, open(val_label_file, 'w') as val_f:
     # 將訓練集文件複製並寫入標籤
