@@ -6,3 +6,4 @@ model_pth/*
 .test_cuda.py
 .split.py
 __pycache__/
+dataset.zip
