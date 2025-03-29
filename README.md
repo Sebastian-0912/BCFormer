@@ -2,7 +2,7 @@
 
 ## Description
 
-BCFormer is a deep learning project focused on multi-label smoke detection using multi modal models such as BLIP, CLIP, with Fourier transform. This repository provides the code and resources necessary to train, validate, and evaluate these models for accurate smoke detection.
+BCFormer is a deep learning project focused on multi-label smoke detection using multi modal models such as BLIP, CLIP, with Fourier transform. This repository provides the code and resources necessary to train, and validate BCFormer for accurate smoke detection.
 
 ## Table of Contents
 
@@ -11,6 +11,7 @@ BCFormer is a deep learning project focused on multi-label smoke detection using
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Dataset](#dataset)
+    - [Dataset Distribution](#dataset-distribution)
   - [Model Structure](#model-structure)
   - [Usage](#usage)
     - [Model Training](#model-training)
@@ -41,6 +42,18 @@ The labeled dataset **NCCUSmoke3K** is available for download:
 
 After downloading, rename the dataset folder to `train_val_dataset` and place it inside the `BCFormer` directory before training.
 
+### Dataset Distribution
+
+The dataset distribution is illustrated in the following figures:
+
+- **Combined Distribution:**
+
+  ![Combined Distribution](asset/combined_distribution.png)
+
+- **Individual Distribution:**
+
+  ![Individual Distribution](asset/individual_distribution.png)
+
 ## Model Structure
 
 The architecture of BCFormer is illustrated below:
@@ -48,11 +61,6 @@ The architecture of BCFormer is illustrated below:
 ![BCFormer Model Structure](asset/BCFormer.png)
 
 ## Usage
-
-Alternatively, if your script supports environment variables:
-```bash
-INPUT_DIR=path/to/raw_data OUTPUT_DIR=path/to/processed_data python preprocess_dataset.py
-```
 
 ### Model Training
 
