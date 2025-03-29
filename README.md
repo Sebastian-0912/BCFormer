@@ -6,20 +6,27 @@ BCFormer is a deep learning project focused on multi-label smoke detection using
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Results](#results)
-- [License](#license)
+- [BCFormer: Blip Clip Fourier Transformer for Multi-label Smoke Detection.](#bcformer-blip-clip-fourier-transformer-for-multi-label-smoke-detection)
+  - [Description](#description)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Dataset](#dataset)
+  - [Model Structure](#model-structure)
+  - [Usage](#usage)
+    - [Model Training](#model-training)
+    - [Evaluation](#evaluation)
+  - [Results](#results)
+  - [License](#license)
 
 ## Installation
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Sebastian-0912/NCCU_Smoke.git
+   git clone https://github.com/Sebastian-0912/BCFormer.git
    ```
 2. **Navigate to the project directory**:
    ```bash
-   cd NCCU_Smoke
+   cd BCFormer
    ```
 3. **Install the required dependencies**:
    ```bash
@@ -27,30 +34,38 @@ BCFormer is a deep learning project focused on multi-label smoke detection using
    ```
    *Ensure you have Python and pip installed on your system.*
 
+## Dataset
+
+The labeled dataset **NCCUSmoke3K** is available for download:
+[Download NCCUSmoke3K](https://drive.google.com/drive/folders/10HV7r-f2RgL2WxBA4VUR9Yo6KNxijjuZ?usp=drive_link)
+
+After downloading, rename the dataset folder to `train_val_dataset` and place it inside the `BCFormer` directory before training.
+
+## Model Structure
+
+The architecture of BCFormer is illustrated below:
+
+![BCFormer Model Structure](asset/BCFormer.png)
+
 ## Usage
+
+Alternatively, if your script supports environment variables:
+```bash
+INPUT_DIR=path/to/raw_data OUTPUT_DIR=path/to/processed_data python preprocess_dataset.py
+```
 
 ### Model Training
 
 Modify the script to include the correct dataset path and hyperparameters, then run:
 ```bash
-python blip2text_encoder_train.py
-```
-
-Similarly, you can train other models using:
-```bash
-python clip2mlp_train.py
-```
-```bash
-python clip_blip_model_train.py
+python BCFormer_train.py
 ```
 
 ### Evaluation
 
-**Some evaluation scripts are for internal use and are not included in public documentation.**
-
-If running an evaluation script:
+Validate the trained model using:
 ```bash
-python blip2text_encoder_val.py
+python BCFormer_val.py
 ```
 Modify the script to specify the correct model path and dataset before running.
 
