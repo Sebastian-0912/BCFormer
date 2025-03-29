@@ -1,7 +1,7 @@
-final_smoke_datasets/*
-final_smoke_datasets_label/*
+Preprocess_dataset/final_smoke_datasets/*
+Preprocess_dataset/final_smoke_datasets_label/*
 train_val_dataset/*
-train_val_dataset_old/*
+Preprocess_dataset/train_val_dataset_old/*
 model_pth/*
 .test_cuda.py
 .split.py
